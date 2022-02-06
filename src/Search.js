@@ -15,6 +15,14 @@ return (
             <div className="col-12 bor">
               <p className="description">What are you looking for?</p>
             </div>
+            <div className="col-12 bor" align="center" autofocus={true}>
+              <form>
+                <input type="search" />
+                <button type="button" class="btn btn-light">
+                    🔍
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

@@ -5,10 +5,11 @@ import Results from "./Results";
 
 export default function Search() {
   let [keyword, setKeyword] = useState("");
+  let[results, setResults] = useState({});
 
   function handleResponseApi(response) {
-    console.log(response.data[0]);
-    console.log(response.data[0].meanings[0].definitions[0]);
+    setResults(response.data[0]);
+   // (response.data[0].meanings[0].definitions[0]); whole path for definition
   }
 
   function search(event) {
@@ -50,7 +51,7 @@ export default function Search() {
                 </form>
               </div>
               {/* Results component*/}
-              <Results />
+              <Results results={results}/>
               {/* Credits*/}
               <div className="col-12 bor">
                 <footer className="footer">

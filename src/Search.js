@@ -7,6 +7,7 @@ export default function Search() {
 
   function handleResponseApi(response) {
     console.log(response.data[0]);
+    console.log(response.data[0].meanings[0].definitions[0]);
   }
 
   function search(event) {
@@ -26,8 +27,10 @@ export default function Search() {
     <div className="Search">
       <div className="container bor">
         <div className="row bor">
+          {/* Main Container */}
           <div className="col-12 d-flex justify-content-center main-container bor">
             <div className="row bor">
+              {/* Dictionary container*/}
               <div className="col-12 bor">
                 <h1 className="title">Dictionary</h1>
               </div>
@@ -41,6 +44,11 @@ export default function Search() {
                     🔍
                   </button>
                 </form>
+              </div>
+              <div className="col-12 bor">
+                <footer className="footer">
+                  <p>Coded by Mili. Hosted by Netlify</p>
+                </footer>
               </div>
             </div>
           </div>

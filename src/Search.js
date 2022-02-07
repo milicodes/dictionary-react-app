@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
+import Results from "./Results";
 
 export default function Search() {
   let [keyword, setKeyword] = useState("");
@@ -27,16 +28,19 @@ export default function Search() {
     <div className="Search">
       <div className="container bor">
         <div className="row bor">
-          {/* Main Container */}
+          {/* Main Container (container - column) */}
           <div className="col-12 d-flex justify-content-center main-container bor">
             <div className="row bor">
-              {/* Dictionary container*/}
+              {/* Dictionary columns*/}
               <div className="col-12 bor">
+                {/* Name*/}
                 <h1 className="title">Dictionary</h1>
               </div>
+              {/* What are you looking for?*/}
               <div className="col-12 bor">
                 <p className="description">What are you looking for?</p>
               </div>
+              {/* Search bar + button*/}
               <div className="col-12 bor" align="center" autoFocus={true}>
                 <form onSubmit={search}>
                   <input type="search" onChange={handleKeyword} /> {""}
@@ -45,6 +49,9 @@ export default function Search() {
                   </button>
                 </form>
               </div>
+              {/* Results component*/}
+              <Results />
+              {/* Credits*/}
               <div className="col-12 bor">
                 <footer className="footer">
                   <p>Coded by Mili. Hosted by Netlify</p>

@@ -5,7 +5,7 @@ import Results from "./Results";
 
 export default function Search() {
   let [keyword, setKeyword] = useState("");
-  let[results, setResults] = useState({});
+  let[results, setResults] = useState(null);
 
   function handleResponseApi(response) {
     setResults(response.data[0]);

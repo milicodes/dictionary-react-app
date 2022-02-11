@@ -1,4 +1,5 @@
 import React from "react";
+import Synonyms from "./Synonyms";
 
 export default function Meaning(promps) {
   return (
@@ -10,6 +11,7 @@ export default function Meaning(promps) {
             <p className="definition">{definition.definition}</p>
             <br />
             <em className="example">{definition.example}</em>
+            <Synonyms synonyms={definition.synonyms} />
           </div>
         );
       })}

@@ -11,7 +11,7 @@ export default function Results(promps) {
           <div className="col-6 bor">
             <h2 className="definition">{promps.results.word}</h2>
             {/*Phonetics */}
-            {promps.results.phonetic.map(function (phonetic, index) {
+            {promps.results.phonetics.map(function (phonetic, index) {
               return (<div key={index}>
                 <Phonetics phonetic={phonetic} />
               </div>)

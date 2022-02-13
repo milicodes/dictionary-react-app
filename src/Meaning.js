@@ -9,7 +9,6 @@ export default function Meaning(promps) {
         return (
           <div key={index}>
             <p className="definition">{definition.definition}</p>
-            <br />
             <em className="example">{definition.example}</em>
             <Synonyms synonyms={definition.synonyms} />
           </div>

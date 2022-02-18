@@ -8,16 +8,31 @@ export default function Search(props) {
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
 
-  function handleResponseApi(response) {
+  function handleDictionaryResponse(response) {
     setResults(response.data[0]);
     // (response.data[0].meanings[0].definitions[0]); whole path for definition
+  }
+
+  function handlePexelsResponse(response) {
+    console.log(response);
+
   }
 
   function search() {
     // documentation https://dictionaryapi.dev/
 
     let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiURL).then(handleResponseApi);
+    // axios call to the dictionary API
+    axios.get(apiURL).then(handleDictionaryResponse);
+
+    // Pexels Url + Call
+
+    let pexelsApiKey =
+      "563492ad6f917000010000017139843c0ff54232a308ef55d1da89ba";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    let headers = {Authorization: `Bearer ${pexelsApiKey}`};
+    // axios call to the Pexels photos API
+    axios.get(pexelsApiUrl, {headers}).then(handlePexelsResponse);
   }
 
   function handleSubmit(event) {
@@ -31,7 +46,7 @@ export default function Search(props) {
 
   function load() {
     setLoaded(true);
-    search()
+    search();
   }
 
   if (loaded) {
@@ -85,3 +100,4 @@ export default function Search(props) {
     return "Loading...";
   }
 }
+// api pexels key 563492ad6f917000010000017139843c0ff54232a308ef55d1da89ba

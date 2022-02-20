@@ -12,9 +12,15 @@ export default function Results(promps) {
             <h2 className="definition">{promps.results.word}</h2>
             {/*Phonetics */}
             {promps.results.phonetics.map(function (phonetic, index) {
-              return (<div key={index}>
-                <Phonetics phonetic={phonetic} />
-              </div>)
+              if (index >= 1 && index < 2) {
+                return (
+                  <div key={index}>
+                    <Phonetics phonetic={phonetic} />
+                  </div>
+                );
+              } else {
+                return null;
+              }
             })}
           </div>
           <div className="col-12 bor">

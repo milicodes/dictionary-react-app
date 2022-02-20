@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
 export default function Search(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
+
 
   function handleDictionaryResponse(response) {
     setResults(response.data[0]);
@@ -14,8 +17,7 @@ export default function Search(props) {
   }
 
   function handlePexelsResponse(response) {
-    console.log(response);
-
+    setPhotos(response.data.photos);
   }
 
   function search() {
@@ -29,7 +31,7 @@ export default function Search(props) {
 
     let pexelsApiKey =
       "563492ad6f917000010000017139843c0ff54232a308ef55d1da89ba";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
     let headers = {Authorization: `Bearer ${pexelsApiKey}`};
     // axios call to the Pexels photos API
     axios.get(pexelsApiUrl, {headers}).then(handlePexelsResponse);
@@ -82,7 +84,13 @@ export default function Search(props) {
                   </form>
                 </div>
                 {/* Results component*/}
-                <Results results={results} />
+                <div className="col-6 bor">
+                  <Results results={results} />
+                </div>
+                {/* Photos component*/}
+                <div className="col-6 bor">
+                  <Photos photos={photos} />
+                </div>
                 {/* Credits*/}
                 <div className="col-12 bor">
                   <footer className="footer">

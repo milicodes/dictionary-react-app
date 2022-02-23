@@ -23,6 +23,7 @@ export default function Results(promps) {
               }
             })}
           </div>
+          {/*Meanings (with our without synonyms) */}
           <div className="col-12 bor">
             {promps.results.meanings.map(function (meaning, index) {
               return (

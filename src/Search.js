@@ -31,7 +31,7 @@ export default function Search(props) {
 
     let pexelsApiKey =
       "563492ad6f917000010000017139843c0ff54232a308ef55d1da89ba";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=3`;
     let headers = {Authorization: `Bearer ${pexelsApiKey}`};
     // axios call to the Pexels photos API
     axios.get(pexelsApiUrl, {headers}).then(handlePexelsResponse);

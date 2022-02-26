@@ -5,13 +5,11 @@ export default function Phonetics(props) {
   let phonetic = props.phonetic.audio;
   if (phonetic) {
     return (
-      <div className="Phonetics">
+      <span className="col-2 Phonetics">
         <a href={phonetic} target="_blank" rel="noreferrer">
-          Listen
+          .
         </a>
-        <br />
-        {props.phonetic.text}
-      </div>
+      </span>
     );
   } else {
     return null;

@@ -1,6 +1,7 @@
 import React from "react";
 import Meaning from "./Meaning";
 import Phonetics from "./Phonetics";
+import PhoneticsText from "./PhoneticsText";
 
 export default function Results(promps) {
   if (promps.results) {
@@ -9,13 +10,18 @@ export default function Results(promps) {
         <div className="row">
           {/*Word */}
           <div className="col-12 bor" align="center">
-            <h2 className="definition">{promps.results.word}</h2>
             {/*Phonetics */}
             {promps.results.phonetics.map(function (phonetic, index) {
               if (index >= 1 && index < 2) {
                 return (
-                  <div key={index}>
-                    <Phonetics phonetic={phonetic} />
+                  <div className="row" key={index}>
+                    <div className="col-12">
+                      <h2 className="definition">
+                        {promps.results.word} {" "}
+                        <Phonetics phonetic={phonetic} />
+                      </h2>
+                    </div>
+                    <PhoneticsText phonetic={phonetic} />
                   </div>
                 );
               } else {

@@ -35,6 +35,7 @@ color: var(--font-color-white);
 
 .background-header {
   background-color: var(--background-brown);
+  border-radius: 1rem;
 }
 
 .mobile-header-size {

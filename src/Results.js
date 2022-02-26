@@ -8,7 +8,7 @@ export default function Results(promps) {
       <div className="container Results">
         <div className="row">
           {/*Word */}
-          <div className="col-12 bor">
+          <div className="col-12 bor" align="center">
             <h2 className="definition">{promps.results.word}</h2>
             {/*Phonetics */}
             {promps.results.phonetics.map(function (phonetic, index) {

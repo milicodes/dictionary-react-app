@@ -30,7 +30,7 @@ export default function Search(props) {
 
     let pexelsApiKey =
       "563492ad6f917000010000017139843c0ff54232a308ef55d1da89ba";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=3`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
     // axios call to the Pexels photos API
     axios.get(pexelsApiUrl, { headers }).then(handlePexelsResponse);
@@ -53,15 +53,32 @@ export default function Search(props) {
   if (loaded) {
     return (
       <div className="Search">
-        <div className="container-fluid bor">
+        <div className="container-fluid margin-main-container bor">
           <div className="row bor">
-            {/* Main Container Left (container - column) */}
-            <div className="col-6 d-flex justify-content-center main-container bor">
+            {/* Main Container Left desktop (container - column) */}
+            <div className="col-6 d-none d-lg-block justify-content-center main-container bor">
               <div className="container">
                 <div className="row bor">
-                  {/* Dictionary columns*/}
-                  <div className="col-12 bor">
-                    {/* Name*/}
+                  {/*Header (Credits)*/}
+                  <header>
+                    <div className="container-fluid margin-header-desktop bor">
+                      <div className="row bor">
+                        <div className="col-6 background-header padding-container">
+                          <div className="row bor">
+                            <div className="col-4 white-color" align="center">
+                              <p>Icon</p>
+                            </div>
+                            <div className="col-6 white-color background-header">
+                              <p className=" mb-1">Open-sourced by Mili.</p>
+                              <p className=" mb-1">Hosted by Netlify</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+                  {/* Title Desktop*/}
+                  <div className="col-12 bor d-block d-md-none">
                     <h1 className="title bor">Dictionary</h1>
                   </div>
                   {/* What are you looking for?*/}
@@ -83,6 +100,65 @@ export default function Search(props) {
                       </button>
                     </form>
                   </div>
+                  {/* Title Desktop*/}
+                  <div className="col-12 bor d-none d-md-block">
+                    <h1 className="title bor">Dictionary</h1>
+                  </div>
+                  {/* Credits*/}
+                  <div className="col-12 bor">
+                    <footer className="footer">
+                      <p>Coded by Mili. Hosted by Netlify</p>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Main Container top mobile (container - column) */}
+            <div className="col-12 d-block d-lg-none justify-content-center main-container bor">
+              <div className="container">
+                <div className="row bor">
+                  {/* Dictionary columns*/}
+                  <header>
+                    <div className="container-fluid bor">
+                      <div className="row bor">
+                        <div className="col-12 white-color background-header bor">
+                          <p className="bor mb-1 mobile-header-size">
+                            Open-sourced by Mili.
+                          </p>
+                          <p className="bor mb-1 mobile-header-size">
+                            Hosted by Netlify
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+                  {/* Title Desktop*/}
+                  <div className="col-12 bor d-block d-md-none">
+                    <h1 className="title bor">Dictionary</h1>
+                  </div>
+                  {/* What are you looking for?*/}
+                  <div className="col-12 bor">
+                    <p className="description">What are you looking for?</p>
+                  </div>
+                  {/* Search bar + button*/}
+                  <div className="col-12 bor" align="center">
+                    <form onSubmit={handleSubmit}>
+                      <input
+                        type="search"
+                        onChange={handleKeyword}
+                        defaultValue={props.defaultKeyword}
+                        autoFocus={true}
+                      />{" "}
+                      {""}
+                      <button type="button" className="btn btn-light">
+                        🔍
+                      </button>
+                    </form>
+                  </div>
+                  {/* Title Desktop*/}
+                  <div className="col-12 bor d-none d-md-block">
+                    <h1 className="title bor">Dictionary</h1>
+                  </div>
                   {/* Credits*/}
                   <div className="col-12 bor">
                     <footer className="footer">
@@ -93,13 +169,32 @@ export default function Search(props) {
               </div>
             </div>
             {/* Main Container right (container - column) */}
-            <div className="col-6 d-flex justify-content-center main-container bor">
+            <div className="col-6 d-none d-lg-block main-container bor">
               <div className="container bor">
                 <div className="row bor">
                   {/* Results component*/}
-                  <Results results={results} />
+                  <div className="col-12 bor">
+                    <Results results={results} />
+                  </div>
                   {/* Photos component*/}
-                  <Photos photos={photos} />
+                  <div className="col-12 bor">
+                    <Photos photos={photos} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Main Container Mobile (under) (container - column) */}
+            <div className="col-12 d-block d-lg-none main-container-mobile bor">
+              <div className="container bor">
+                <div className="row bor">
+                  {/* Results component*/}
+                  <div className="col-12 bor">
+                    <Results results={results} />
+                  </div>
+                  {/* Photos component*/}
+                  <div className="col-12 bor">
+                    <Photos photos={photos} />
+                  </div>
                 </div>
               </div>
             </div>

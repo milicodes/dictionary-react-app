@@ -2,7 +2,6 @@ import React from "react";
 import Synonyms from "./Synonyms";
 
 export default function Meaning(promps) {
-  console.log(promps);
   return (
     <div className="Meaning">
       <h3 className="meanings-type">{promps.meaning.partOfSpeech}</h3>

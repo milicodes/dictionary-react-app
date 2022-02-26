@@ -1,13 +1,50 @@
+:root {
+    --space-in-between: 0 0 3rem; 
+    --padding-sections: 1rem;
+    --background-brown: #502D1A;
+    --font-color-white: #FFFFFF;
+}
+
 p.description {
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 500;
 }
 
+div.margin-main-container {
+  padding: 0 4rem;
+}
+
+.margin-header-desktop {
+  margin: var(--space-in-between);
+}
+
 .main-container {
   background-color: #ffffff;
   border-radius: 20px;      
   margin-top: 3rem;
+}
+
+.padding-container {
+  padding: 1rem;
+}
+
+.white-color {
+color: var(--font-color-white);
+}
+
+.background-header {
+  background-color: var(--background-brown);
+}
+
+.mobile-header-size {
+  font-size: 13px;
+}
+
+.main-container-mobile {
+  background-color: #ffffff;
+  border-radius: 20px;      
+  margin-top: 1rem;
 }
 
 .title {

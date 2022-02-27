@@ -3,10 +3,10 @@
     --padding-sections: 1rem;
     --background-brown: #502D1A;
     --font-color-white: #FFFFFF;
+    --yellow: #EEBB33;
 }
 
 p.description {
-  text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 500;
 }
@@ -31,6 +31,10 @@ div.margin-main-container {
 
 .white-color {
 color: var(--font-color-white);
+}
+
+.background-yellow {
+  background-color: var(--yellow);
 }
 
 .background-header {

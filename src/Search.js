@@ -82,33 +82,36 @@ export default function Search(props) {
                     <h1 className="title bor">Dictionary</h1>
                   </div>
                   {/* What are you looking for?*/}
-                  <div className="col-12 bor">
-                    <p className="description">What are you looking for?</p>
-                  </div>
-                  {/* Search bar + button*/}
-                  <div className="col-12 bor" align="center">
-                    <form onSubmit={handleSubmit}>
-                      <input
-                        type="search"
-                        onChange={handleKeyword}
-                        defaultValue={props.defaultKeyword}
-                        autoFocus={true}
-                      />{" "}
-                      {""}
-                      <button type="button" className="btn btn-light">
-                        🔍
-                      </button>
-                    </form>
+                  <div className="col-6 background-yellow bor" align="left">
+                    <div className="row">
+                      <div className="col-12 bor">
+                        <p className="description">What are you looking for?</p>
+                      </div>
+                      {/* Search bar + button*/}
+                      <div className="col-12 bor">
+                        <form onSubmit={handleSubmit} class="row g-2">
+                          <div className="col-9">
+                            <input
+                              type="search"
+                              class="form-control"
+                              onChange={handleKeyword}
+                              defaultValue={props.defaultKeyword}
+                              autoFocus={true}
+                            />{" "}
+                          </div>
+                          {""}
+                          <div className="col-auto">
+                            <button type="button" className="btn btn-light">
+                              🔍
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                   {/* Title Desktop*/}
                   <div className="col-12 bor d-none d-md-block">
                     <h1 className="title bor">Dictionary</h1>
-                  </div>
-                  {/* Credits*/}
-                  <div className="col-12 bor">
-                    <footer className="footer">
-                      <p>Coded by Mili. Hosted by Netlify</p>
-                    </footer>
                   </div>
                 </div>
               </div>
@@ -158,12 +161,6 @@ export default function Search(props) {
                   {/* Title Desktop*/}
                   <div className="col-12 bor d-none d-md-block">
                     <h1 className="title bor">Dictionary</h1>
-                  </div>
-                  {/* Credits*/}
-                  <div className="col-12 bor">
-                    <footer className="footer">
-                      <p>Coded by Mili. Hosted by Netlify</p>
-                    </footer>
                   </div>
                 </div>
               </div>

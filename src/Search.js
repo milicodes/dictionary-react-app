@@ -77,12 +77,12 @@ export default function Search(props) {
                       </div>
                     </div>
                   </header>
-                  {/* Title Desktop*/}
-                  <div className="col-12 bor d-block d-md-none">
-                    <h1 className="title bor">Dictionary</h1>
-                  </div>
                   {/* What are you looking for?*/}
-                  <div className="col-6 background-yellow bor" align="left">
+                  <div className="col-1"></div>
+                  <div
+                    className="col-6 background-yellow ms-4 bor search-bar"
+                    align="left"
+                  >
                     <div className="row">
                       <div className="col-12 bor">
                         <p className="description">What are you looking for?</p>
@@ -110,8 +110,10 @@ export default function Search(props) {
                     </div>
                   </div>
                   {/* Title Desktop*/}
-                  <div className="col-12 bor d-none d-md-block">
-                    <h1 className="title bor">Dictionary</h1>
+                  <div className="col-4 bor"></div>
+                  <div className="col-1 bor"></div>
+                  <div className="col-6 text-wrap bor d-none d-md-block">
+                    <h1 className="title bor">DICTIO ‣ NARY</h1>
                   </div>
                 </div>
               </div>
@@ -137,7 +139,7 @@ export default function Search(props) {
                   </header>
                   {/* Title Desktop*/}
                   <div className="col-12 bor d-block d-md-none">
-                    <h1 className="title bor">Dictionary</h1>
+                    <h1 className="title-mobile bor">DICTIONARY</h1>
                   </div>
                   {/* What are you looking for?*/}
                   <div className="col-12 background-yellow bor" align="left">
@@ -169,7 +171,7 @@ export default function Search(props) {
                   </div>
                   {/* Title Desktop*/}
                   <div className="col-12 bor d-none d-md-block">
-                    <h1 className="title bor">Dictionary</h1>
+                    <h1 className="title bor">DICTIONARY</h1>
                   </div>
                 </div>
               </div>

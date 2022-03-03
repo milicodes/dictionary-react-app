@@ -10,24 +10,25 @@ export default function Results(promps) {
         <div className="row">
           {/*Word */}
           <div className="col-12 bor" align="center">
-            {/*Phonetics */}
-            {promps.results.phonetics.map(function (phonetic, index) {
-              if (index >= 1 && index < 2) {
-                return (
-                  <div className="row" key={index}>
-                    <div className="col-12">
-                      <h2 className="definition">
-                        {promps.results.word} {" "}
+            <h2 className="definition">
+              {promps.results.word} {""}
+              <span>
+                {promps.results.phonetics.map(function (phonetic, index) {
+                  if (index < 1) {
+                    return (
+                      <span className="phonetic-sound" key={index}>
                         <Phonetics phonetic={phonetic} />
-                      </h2>
-                    </div>
-                    <PhoneticsText phonetic={phonetic} />
-                  </div>
-                );
-              } else {
-                return null;
-              }
-            })}
+                        <PhoneticsText phonetic={phonetic} />
+                      </span>
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
+              </span>
+            </h2>
+
+            {/*Phonetics */}
           </div>
           {/*Meanings (with our without synonyms) */}
           <div className="col-12 bor">

@@ -18,13 +18,13 @@ export default function Results(promps) {
                     return (
                       <span className="phonetic-sound" key={index}>
                         <Phonetics phonetic={phonetic} />
-                        <PhoneticsText phonetic={phonetic} />
                       </span>
                     );
                   } else {
                     return null;
                   }
                 })}
+                <PhoneticsText phonetic={promps.results.phonetics} />
               </span>
             </h2>
 

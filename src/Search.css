@@ -26,8 +26,23 @@ div.search-bar {
 
 .main-container {
   background-color: #ffffff;
-  border-radius: 20px;      
+  border-radius: 20px 0 0 20px;      
   margin-top: 3rem;
+}
+
+.main-container-right {
+    background-color: #ffffff;
+  border-radius: 0 20px 20px 0;      
+  margin-top: 3rem;
+}
+
+.container-result {
+  border-radius: 20px;
+}
+
+.container-result-mobile {
+  border-radius: 20px;
+  margin: 1rem 0;
 }
 
 .padding-container {

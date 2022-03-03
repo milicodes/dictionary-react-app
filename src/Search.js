@@ -176,9 +176,9 @@ export default function Search(props) {
                 </div>
               </div>
             </div>
-            {/* Main Container right (container - column) */}
-            <div className="col-6 d-none d-lg-block main-container bor">
-              <div className="container bor">
+            {/* Main Container right Desktop (container - column) */}
+            <div className="col-6 d-none d-lg-block main-container-right bor">
+              <div className="container background-yellow container-result bor">
                 <div className="row bor">
                   {/* Results component*/}
                   <div className="col-12 bor">
@@ -192,8 +192,8 @@ export default function Search(props) {
               </div>
             </div>
             {/* Main Container Mobile (under) (container - column) */}
-            <div className="col-12 d-block d-lg-none main-container-mobile bor">
-              <div className="container bor">
+            <div className="col-12 d-block d-lg-none main-container-mobile-right bor">
+              <div className="container background-yellow container-result-mobile bor">
                 <div className="row bor">
                   {/* Results component*/}
                   <div className="col-12 bor">

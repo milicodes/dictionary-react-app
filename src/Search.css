@@ -25,16 +25,20 @@ div.search-bar {
 }
 
 .main-container {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.375);
   border-radius: 20px 0 0 20px;      
   margin-top: 3rem;
+   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .main-container-right {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.375);;
   border-radius: 0 20px 20px 0;      
   margin-top: 3rem;
   padding: 2rem 4rem;
+   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .container-result {

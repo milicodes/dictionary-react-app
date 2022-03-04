@@ -3,3 +3,9 @@ h2.definition {
     padding: 1rem 0;
     font-weight: 700;
 }
+
+.background-results {
+    background-color: #ffffffee;
+    border-radius: 3rem;
+    padding: 1rem 1rem;
+}

@@ -10,7 +10,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-12 squares">
-            <ul class="bg-bubbles">
+            <ul className="bg-bubbles">
               <li></li>
               <li></li>
               <li></li>

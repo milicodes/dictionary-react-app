@@ -1,0 +1,16 @@
+a {
+    color: var(--font-color-white);
+    transition: all 100ms ease-in-out;
+}
+
+a:hover {
+    color: var(--light-yellow);
+}
+
+.speaker-icon {
+    background-color: var(--background-brown);
+    padding: 0.4rem 0.5rem;
+    border-radius: 40rem;
+    font-size: 1.4rem;
+}
+

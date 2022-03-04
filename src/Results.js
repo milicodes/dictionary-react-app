@@ -32,7 +32,7 @@ export default function Results(promps) {
             {/*Phonetics */}
           </div>
           {/*Meanings (with our without synonyms) */}
-          <div className="col-12 bor">
+          <div className="col-12 bor background-results">
             {promps.results.meanings.map(function (meaning, index) {
               return (
                 <div key={index}>

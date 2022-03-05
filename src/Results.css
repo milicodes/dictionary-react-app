@@ -5,7 +5,11 @@ h2.definition {
 }
 
 .background-results {
-    background-color: #ffffffee;
+     background: -webkit-linear-gradient(top left, #FFEFBA, #FFFFFF);
+  background: linear-gradient(to bottom right,  #FFEFBA, #FFFFFF);
+  background-attachment: fixed;
     border-radius: 3rem;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
+   font-weight: 600;
+   color: var(--background-brown);
 }

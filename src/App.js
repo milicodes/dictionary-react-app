@@ -6,7 +6,7 @@ import Search from './Search';
 function App() {
   return (
     <div className="App">
-      <Search defaultKeyword="hello" />
+      <Search defaultKeyword="food" />
       <div className="container">
         <div className="row">
           <div className="col-12 squares">

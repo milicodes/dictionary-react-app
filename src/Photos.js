@@ -7,11 +7,11 @@ export default function Photos(props) {
         <div className="row bor">
           {props.photos.map(function (photo, index) {
             return (
-              <div className="col-4 bor" key={index}>
+              <div className="col-4 image-space bor" key={index}>
                 <a href={photo.src.original} target="_blank" rel="noreferrer">
                   <img
                     src={photo.src.landscape}
-                    className="img-fluid"
+                    className="img-fluid image-border hvr-grow"
                     rel="noreferrer"
                     alt="Word searched"
                   />

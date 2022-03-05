@@ -13,7 +13,7 @@ p.description {
 }
 
 div.margin-main-container {
-  padding: 0 3rem;
+  padding: 0 1rem;
 }
 
 div.search-bar {
@@ -23,6 +23,18 @@ div.search-bar {
 
 .margin-header-desktop {
   margin: var(--space-in-between);
+}
+
+.btn {
+  background-color: #da0063;
+  border: none;
+  transition: all 100ms ease-in-out;
+  color: var(--font-color-white);
+}
+
+.btn:hover {
+  background-color: #cc005c;
+   color: var(--font-color-white);
 }
 
 .main-container {
@@ -61,12 +73,18 @@ color: var(--font-color-white);
 }
 
 .background-yellow {
-  background-color: var(--yellow);
+    background: -webkit-linear-gradient(top left, #ffd000e8 10%, #ffa751);
+  background: linear-gradient(to bottom right, #ffd000f1 10%, #ffa751);
+  background-attachment: fixed;
 }
 
 .background-header {
-  background-color: var(--background-brown);
+ background: -webkit-linear-gradient(top left, #FBD786 0%, #ffa751 100%);
+  background: linear-gradient(to bottom right, #FBD786 0%, #ffa751 100%);
+  background-attachment: fixed;
   border-radius: 1rem;
+  font-weight: 700;
+  color: var(--background-brown);
 }
 
 .mobile-header-size {
@@ -97,4 +115,8 @@ color: var(--font-color-white);
   text-align: center;
   font-size: 15px;
   padding: 1rem 0 0 0;
+}
+
+.logo {
+  width: 60px;
 }

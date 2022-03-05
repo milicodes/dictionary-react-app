@@ -3,6 +3,9 @@ import "./Search.css";
 import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
+import logo from './logo.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Search(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
@@ -61,12 +64,12 @@ export default function Search(props) {
                 <div className="row bor">
                   {/*Header (Credits)*/}
                   <header>
-                    <div className="container-fluid margin-header-desktop bor">
+                    <div className="container-fluid ms-5 margin-header-desktop bor">
                       <div className="row bor">
                         <div className="col-6 background-header padding-container">
                           <div className="row bor">
                             <div className="col-4 white-color" align="center">
-                              <p>Icon</p>
+                              <img className="logo" src={logo} alt="Logo" />
                             </div>
                             <div className="col-6 white-color background-header">
                               <p className=" mb-1">Open-sourced by Mili.</p>
@@ -102,7 +105,7 @@ export default function Search(props) {
                           {""}
                           <div className="col-auto">
                             <button type="button" className="btn btn-light">
-                              🔍
+                              <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </button>
                           </div>
                         </form>
@@ -162,7 +165,7 @@ export default function Search(props) {
                           {""}
                           <div className="col-auto">
                             <button type="button" className="btn btn-light">
-                              🔍
+                              <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </button>
                           </div>
                         </form>

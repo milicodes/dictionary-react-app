@@ -82,7 +82,13 @@ export default function Search(props) {
                         <div className="col-6 background-header padding-container">
                           <div className="row ">
                             <div className="col-4 white-color" align="center">
-                              <img className="logo" src={logo} alt="Logo" />
+                              <a href="https://www.instagram.com/mili.codes/?hl=en">
+                                <img
+                                  className="logo hvr-grow"
+                                  src={logo}
+                                  alt="Logo"
+                                />
+                              </a>
                             </div>
                             <div className="col-6 white-color background-header">
                               <div className="background-link">

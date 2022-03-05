@@ -155,7 +155,7 @@ export default function Search(props) {
                   <header>
                     <div className="container-fluid ">
                       <div className="row ">
-                        <div className="col-12 white-color background-header ">
+                        <div className="col-12 mt-2 mb-2 white-color background-header ">
                           <p className=" mb-1 mobile-header-size">
                             <div className="background-link">
                               <a
@@ -184,7 +184,7 @@ export default function Search(props) {
                   </div>
                   {/* What are you looking for?*/}
                   <div
-                    className="col-12 background-yellow  search-bar-mobile"
+                    className="col-12 mb-4  background-yellow  search-bar-mobile"
                     align="left"
                   >
                     <div className="row">

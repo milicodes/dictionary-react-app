@@ -72,7 +72,11 @@ export default function Search(props) {
                               <img className="logo" src={logo} alt="Logo" />
                             </div>
                             <div className="col-6 white-color background-header">
-                              <p className=" mb-1">Open-sourced by Mili.</p>
+                              <div className="background-link">
+                                <a className=" mb-1">Open-sourced</a>
+                              </div>{" "}
+                              {""}
+                              by Mili.
                               <p className=" mb-1">Hosted by Netlify</p>
                             </div>
                           </div>
@@ -88,7 +92,9 @@ export default function Search(props) {
                   >
                     <div className="row">
                       <div className="col-12 bor">
-                        <p className="description">What are you looking for?</p>
+                        <p className="description mt-2 ms-1">
+                          What are you looking for?
+                        </p>
                       </div>
                       {/* Search bar + button*/}
                       <div className="col-12 bor">
@@ -131,7 +137,10 @@ export default function Search(props) {
                       <div className="row bor">
                         <div className="col-12 white-color background-header bor">
                           <p className="bor mb-1 mobile-header-size">
-                            Open-sourced by Mili.
+                            <div className="background-link">
+                              <a className=" mb-1">Open-sourced</a>
+                            </div>{" "}
+                            {""} by Mili.
                           </p>
                           <p className="bor mb-1 mobile-header-size">
                             Hosted by Netlify
@@ -140,12 +149,17 @@ export default function Search(props) {
                       </div>
                     </div>
                   </header>
-                  {/* Title Desktop*/}
+                  {/* Title*/}
                   <div className="col-12 bor d-block d-md-none">
-                    <h1 className="title-mobile bor">DICTIONARY</h1>
+                    <h1 className="title-mobile bor" align="center">
+                      DICTIONARY
+                    </h1>
                   </div>
                   {/* What are you looking for?*/}
-                  <div className="col-12 background-yellow bor" align="left">
+                  <div
+                    className="col-12 background-yellow bor search-bar-mobile"
+                    align="left"
+                  >
                     <div className="row">
                       <div className="col-12 bor">
                         <p className="description">What are you looking for?</p>

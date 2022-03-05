@@ -1,6 +1,8 @@
 a {
     color: var(--font-color-white);
     transition: all 100ms ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {

@@ -10,7 +10,7 @@ export default function Results(promps) {
       <div className="container Results">
         <div className="row">
           {/*Word */}
-          <div className="col-12 bor" align="center">
+          <div className="col-12" align="center">
             <h2 className="definition">
               {promps.results.word} {""}
               <span>

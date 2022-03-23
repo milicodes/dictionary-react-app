@@ -3,6 +3,7 @@ import "./Meaning.css";
 import Synonyms from "./Synonyms";
 import SynonymsMobile from "./SynonymsMobile";
 
+
 export default function Meaning(promps) {
   return (
     <div className="Meaning container">
